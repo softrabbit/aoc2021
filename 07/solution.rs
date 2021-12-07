@@ -6,9 +6,16 @@
 
 use std::io::{self, BufRead};
 
+// In part 1, the cost of fuel is 1 for each step
+#[cfg(not(part2))]
+fn costof(n: i64) -> i64 {
+    n
+}
 // In part 2, costs are calculated in an exponential way.
 // Basically, sum all numbers up to n. Recursion is stupid, too.
+#[cfg(part2)]
 fn costof(n: i64) -> i64 {
+    // NB. Expecting a non-negative integer!
     return if n == 0 { 0 } else { n + costof(n -1) };
 }
 
@@ -24,7 +31,6 @@ fn main() {
         .collect();
 
     // Align the elements to the same X.
-    // Every step costs 1 fuel.
     // I think it's pretty obvious that the 
     // potential spots for aligning
     // should be between max and min of the array?
@@ -38,10 +44,7 @@ fn main() {
     // Brute forcing it
     let mut min_cost = i64::MAX;
     let mut min_idx = 0;
-    for n in min..=max {
-        #[cfg(not(part2))]
-        let cost = numbers.iter().map(|i| (n-i).abs()).sum();
-        #[cfg(part2)]
+    for n in min..=max {        
         let cost = numbers.iter().map(|i| costof((n-i).abs()) ).sum();
         if cost < min_cost {
             min_cost = cost;
