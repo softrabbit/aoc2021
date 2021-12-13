@@ -8,7 +8,7 @@ fn main() {
     // Set up the input reading and read input
     let stdin = io::stdin();    
     // Peekable might be useful, depending on how we iterate.
-    let mut input_iter = stdin.lock().lines().peekable();
+    let input_iter = stdin.lock().lines().peekable();
     // Input is a single line
     /*
     let line1 = input_iter.next().unwrap().unwrap();

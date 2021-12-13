@@ -5,7 +5,7 @@ Last year I maybe bit off more than I could chew in using a different language e
 
 I'll try to chronicle what I touch on each day, or at least leave notes for myself. 
 
-There might be better ways to do the things I do, but this code is what I arrive at after Google and Stckoverflow.
+There might be better ways to do the things I do, but this code is what I arrive at after Google and Stckoverflow. Error checking is more or less nonexistant, something that might be a thing to fix later on.
 
 ## [Day 1](https://github.com/softrabbit/aoc2021/tree/main/01)
 Lots of unwrapping, and some io::stdin.
@@ -29,3 +29,18 @@ morning for AoC, though. Checked out command line arguments, looks close enough 
 
 ## [Day 7](https://github.com/softrabbit/aoc2021/tree/main/07)
 Nothing new Rust-wise in todays solution, partly because I didn't have the time to put in any extra effort. Might come back to refine later. Not that even the most basic practice is wasted at this point, maybe I'll get something to compile on the first try some day.
+
+## [Day 8](https://github.com/softrabbit/aoc2021/tree/main/08)
+
+## [Day 9](https://github.com/softrabbit/aoc2021/tree/main/09)
+
+## [Day 10](https://github.com/softrabbit/aoc2021/tree/main/10)
+
+## [Day 11](https://github.com/softrabbit/aoc2021/tree/main/11)
+Wow. Not a hard algorithm at all, but a lot of time went into the intricacies of looping and modifying a vector of vectors. Especially when there was a need to loop from possibly -1 to 1, which seems like a thing you'd like to now and then but seems to require jumping through quite a few hoops.
+
+## [Day 12](https://github.com/softrabbit/aoc2021/tree/main/12)
+This proved to be a tough one. Couldn't get this on the day, so I'll return to it (in January maybe?). To quote some guy on the Internet: "Modeling graph-like structures in Rust is not a simple problem." 
+
+## [Day 13](https://github.com/softrabbit/aoc2021/tree/main/13)
+Code reuse, I took my 2D vector code from day 5 to speed my progress. Tried `zip` for the first time. Couldn't quite figure out how to use the experimental td::iter::zip` function so I went with the "method on an iterator" strategy.
