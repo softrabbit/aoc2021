@@ -47,8 +47,8 @@ fn main() {
         counts.insert(tmp.to_string(),
                       counts
                       .get(tmp)
-                      .get_or_insert(&1)
-                      .to_owned());
+                      .get_or_insert(&0)
+                      .to_owned() + 1);
     }
 
     // Then iterate...
